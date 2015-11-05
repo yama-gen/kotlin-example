@@ -1,0 +1,29 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    maven {
+      url 'http://repository.jetbrains.com/all'
+    }
+  }
+  dependencies {
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:+'
+  }
+}
+
+apply plugin: "kotlin"
+
+repositories {
+  mavenCentral()
+  maven {
+    url 'http://repository.jetbrains.com/all'
+  }
+}
+
+dependencies {
+  compile 'org.jetbrains.kotlin:kotlin-stdlib:+'
+  testCompile 'junit:junit:+'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.4'
+}
